@@ -4,4 +4,4 @@ This is a small project I made in a couple of days to write Tetris from scratch,
 
 Contact: 
 email: hootkarsh@gmail.com
-website: utkarshraov.com
+website: www.utkarshraov.com
