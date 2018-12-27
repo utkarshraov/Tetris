@@ -130,7 +130,7 @@ int main()
 	int currentX = gridWidth / 2;
 	int currentY = 0;
 
-	int fallingSpeed = 40; //ticks required per fall
+	int fallingSpeed = 20; //ticks required per fall
 	int fallTickCounter = 0;
 	int blockCount = 0;
 	int score = 0;
@@ -145,10 +145,8 @@ int main()
 		// Update Tick
 		this_thread::sleep_for(tickInterval);
 		fallTickCounter++;
-		if (fallTickCounter == fallingSpeed)
-		{
-			forcePieceDown = true;
-		}
+
+		forcePieceDown = (fallTickCounter == fallingSpeed);
 
 		//Receive Input
 		for (int i = 0; i < 4; i++)
@@ -281,7 +279,7 @@ int main()
 	CloseHandle(console);
 	cout << "Game Over!" << endl << "Score: " << score << endl;
 	system("pause");
-
+	return 0;
 	
 }
 
